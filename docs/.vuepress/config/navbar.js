@@ -18,6 +18,6 @@ export const navbar = [
     },
     {
         text: 'GitHub',
-        link: ''
+        link: 'https://github.com/shimu115/wallpaper-api-docs'
     }
 ]
