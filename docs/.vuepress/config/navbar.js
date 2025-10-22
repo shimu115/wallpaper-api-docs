@@ -1,20 +1,15 @@
+import { sidebar } from "./sidebar.js";
+
 export const navbar = [
     {
         text: '文档',
-        children: [
-            {
-                text: '快速开始',
-                link: '/guide/quick-start.md'
-            },
-            {
-                text: 'wallpaper api 文档说明',
-                link: '/api/api.md'
-            },
-            {
-                text: '部署方式',
-                link: '/deploy/docker.md'
+        children: Object.entries(sidebar).map(([path, sections]) => {
+            const firstSection = sections[0]
+            return {
+                text: firstSection.text,
+                link: firstSection.children?.[0] || `${path}/`,
             }
-        ]
+        }),
     },
     {
         text: 'GitHub',
