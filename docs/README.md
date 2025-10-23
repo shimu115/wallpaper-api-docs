@@ -11,6 +11,9 @@ actions:
     - text: 项目部署
       link: /deploy/deploy.md
       type: secondary
+    - text: Release Notes
+      link: /release-notes.md
+      type: primary
       
 head: 
     - meta
@@ -26,10 +29,8 @@ features:
       details: 随机返回一张 acg 壁纸，源数据接口会302到图片链接，此接口会以流体返回，不会改变链接地址
     - title: 项目部署
       details: 本地 java 与 docker 构建与部署
-    - title: Empty-1
-      details: Placeholder
-    - title: Empty-2
-      details: Placeholder
+    - title: Release Notes
+      details: 版本更新日志
 
 footer: MIT Licensed | Copyright © 2025-present Shimu Community
 ---

@@ -31,5 +31,12 @@ export const sidebar = {
                 '/deploy/deploy.md'
             ]
         }
+    ],
+    "/release": [
+        {
+            text: "Release Notes",
+            collapsible: true,
+            link: "/release-notes.md"
+        },
     ]
 }

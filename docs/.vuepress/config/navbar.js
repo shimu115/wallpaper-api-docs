@@ -12,6 +12,19 @@ export const navbar = [
         }),
     },
     {
+        text: 'Release Notes',
+        children: [
+            {
+                text: 'v1.0.1-latest',
+                link: '/release-notes.md#v1.0.1%20-%20latest%20(2025-10-11)'
+            },
+            {
+                text: 'v1.0.0-alpha',
+                link: '/release-notes.md#v1.0.0-alpha%20-%20Pre-release%20(2025-10-3)'
+            }
+        ]
+    },
+    {
         text: 'GitHub',
         children: [
             {
