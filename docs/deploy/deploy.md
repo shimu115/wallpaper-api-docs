@@ -6,7 +6,8 @@
 
 ## 使用已构建好的包进行部署
 1. **下载 `latest` 版本的包**
->使用 [release](https://github.com/shimu115/wallpaper-api/releases) 中 `latest` 版本的包
+
+使用 [release](https://github.com/shimu115/wallpaper-api/releases) 中 `latest` 版本的包
 
 2. **部署项目**
 **部署命令**
@@ -41,4 +42,4 @@ mvn clean package
 4. **部署项目**
 >进入项目目录下，查看 `target` 目录下是否有 `wallpaper-api-{version}.jar` 包，有则部署，没有则重新构建
 
-然后从 [使用已构建好的包进行部署](./deploy.md#使用已构建好的包进行部署) 的第三步 开始
+然后从 [使用已构建好的包进行部署](./deploy.md#使用已构建好的包进行部署) 的第二步 开始
