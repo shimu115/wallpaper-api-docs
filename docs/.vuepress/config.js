@@ -10,7 +10,7 @@ export default defineUserConfig({
         {
             sidebar: sidebar,
             navbar: navbar,
-            base: '/wallpaper-api-docs/',
+            base: '/',
         }
     ),
     lang: 'zh-CN',
