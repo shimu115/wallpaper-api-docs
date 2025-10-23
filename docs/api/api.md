@@ -3,7 +3,7 @@
 
 例如：
 
-**bing 进日壁纸接口**
+**bing 今日壁纸接口**
 ~~~
 /bing/wallpaper/today
 ~~~
