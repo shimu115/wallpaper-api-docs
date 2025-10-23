@@ -9,21 +9,21 @@
 
 **请求头**
 
-| header | description                               | default required |
-| ------ |-------------------------------------------| ---------- |
-| User-Agent | 使用设备自带的请求头，不可手动去除此请求头，接口需要使用此请求头自动调整图片分辨率 | true |
+| header | description                               | default required | default value |
+| ------ |-------------------------------------------| ---------- | ---------------|
+| User-Agent | 使用设备自带的请求头，不可手动去除此请求头，接口需要使用此请求头自动调整图片分辨率 | true | 默认设备ua |
 
 > **暂未判断纯血鸿蒙设备的请求头，因为身边无人使用纯血鸿蒙设备，所以不知道默认ua是什么**
 > 
-> 为判断的设备均以默认的 1920x1080 分辨率处理
+> 未判断的设备均以默认的 1920x1080 分辨率处理
 
 **参数说明**
 
-| param   | description                                                 | default required |
-|---------|-------------------------------------------------------------|------------------|
-| i18nKey | 语言（默认 zh_CN），参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false |
-| width   | 宽度（默认1920）                                                  | false |
-| height  | 高度（默认1080）                                                  | false |
+| param   | description                                                 | default required | default value |
+|---------|-------------------------------------------------------------|------------------| ---------- |
+| i18nKey | 语言，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false | zh_CN |
+| width   | 宽度                                                  | false | 1920 |
+| height  | 高度                                                  | false | 1080 |
 
 ## 随机壁纸
 ~~~
@@ -32,20 +32,21 @@
 
 **请求头**
 
-| header | description                               | default required |
-| ------ |-------------------------------------------| ---------- |
-| User-Agent | 使用设备自带的请求头，不可手动去除此请求头，接口需要使用此请求头自动调整图片分辨率 | true |
+| header | description                               | default required | default value |
+| ------ |-------------------------------------------| ---------- |---------------|
+| User-Agent | 使用设备自带的请求头，不可手动去除此请求头，接口需要使用此请求头自动调整图片分辨率 | true | 默认设备ua |
 
 > **暂未判断纯血鸿蒙设备的请求头，因为身边无人使用纯血鸿蒙设备，所以不知道默认ua是什么**
-> 为判断的设备均以默认的 1920x1080 分辨率处理
+> 
+> 未判断的设备均以默认的 1920x1080 分辨率处理
 
 **参数说明**
 
-| param   | description                               | default required |
-|---------|-------------------------------------------|------------------|
-| i18nKey | 默认使用所有国家图片进行随机，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false |
-| width   | 宽度（默认1920） | false |
-| height  | 高度（默认1080） | false |
+| param   | description                               | default required | default value |
+|---------|-------------------------------------------|------------------| ---------- |
+| i18nKey | 默认使用所有国家图片进行随机，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false | none |
+| width   | 宽度 | false | 1920 |
+| height  | 高度 | false | 1080 |
 
 ## 手动刷新数据
 ~~~
@@ -63,7 +64,7 @@ http://localhost:9123/api/bing/wallpaper/getI18n
 ~~~
 
 **返回结果**
-~~~
+~~~json
 {
   "code": 200,
   "msg": null,
@@ -98,12 +99,12 @@ http://localhost:9123/api/bing/wallpaper/getI18n
 
 **参数说明**
 
-| param  | description                                                                                          | default required |
-|--------|------------------------------------------------------------------------------------------------------|------------------|
-|i18nKey | 默认使用所有国家图片进行随机，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false |
-| order  | 排序（默认降序）, 参数见 [SortEnum](../enum/enum.md#SortEnum枚举说明) 枚举说明，传 key，不区分大小写                                                                | false |
-| page  | 页数（默认1）                                                                                              | false |
-| pageSize | 每页数量（默认10）                                                                                           | false |
+| param  | description                                                                                         | default required | default value |
+|--------|-----------------------------------------------------------------------------------------------------|------------------|---------------|
+|i18nKey | 默认使用所有国家图片进行随机，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false | none          |
+| order  | 排序（默认降序）, 参数见 [SortEnum](../enum/enum.md#SortEnum枚举说明) 枚举说明，传 key，不区分大小写 | false | desc          |
+| page  | 页数（默认1）                                                                                             | false | 1           |
+| pageSize | 每页数量（默认10）                                                                                          | false | 10           |
 
 **[请求示例](http://localhost:9123/api/bing/wallpaper/findPage?i18nKey=zh_CN&page=1&pageSize=10&order=desc)**
 ~~~
@@ -111,7 +112,7 @@ http://localhost:9123/api/bing/wallpaper/findPage?i18nKey=zh_CN&page=1&pageSize=
 ~~~
 
 **返回结果**
-~~~
+~~~json
 {
   "code": 200,
   "msg": null,
@@ -183,20 +184,20 @@ http://localhost:9123/api/bing/wallpaper/findPage?i18nKey=zh_CN&page=1&pageSize=
 
 **参数说明**
 
-| param  | description                                                   | default required |
-|--------|---------------------------------------------------------------|------------------|
-|i18nKey | 默认使用所有国家图片进行随机，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false |
-| dataId  | 按照 dataId （源数据的 id）查询                                         | false |
-| startTime  | 起始时间，范围查询                                                     | false |
-| endTime | 结束时间，范围查询                                                     | false |
-| order  | 排序（默认降序）, 参数见 [SortEnum](../enum/enum.md#SortEnum枚举说明) 枚举说明，传 key，不区分大小写                      | false |
+| param  | description                                                   | default required | default value |
+|--------|---------------------------------------------------------------|------------------| ---------- |
+|i18nKey | 默认使用所有国家图片进行随机，参考 [BingJsonI18nKey](../enum/enum.md#BingJsonI18nKey枚举说明) 说明，或参考 [获取可使用的语言数据](#获取可使用的语言数据) 接口 | false | none |
+| dataId  | 按照 dataId （源数据的 id）查询                                         | false | none |
+| startTime  | 起始时间，范围查询                                                     | false | none |
+| endTime | 结束时间，范围查询                                                     | false | none |
+| order  | 排序（默认降序）, 参数见 [SortEnum](../enum/enum.md#SortEnum枚举说明) 枚举说明，传 key，不区分大小写                      | false | desc |
 
 **[请求示例](http://localhost:9123/api/bing/wallpaper/find?i18nKey=zh_CN&startTime=2025-10-01&endTime=2025-10-31&order=desc)**
 ~~~
 http://localhost:9123/api/bing/wallpaper/find?i18nKey=zh_CN&startTime=2025-10-01&endTime=2025-10-31&order=desc
 ~~~
 **返回结果**
-~~~
+~~~json
 {
   "code": 200,
   "msg": null,
