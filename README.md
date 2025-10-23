@@ -8,6 +8,6 @@
 
 * vuepress 源码 [GitHub 仓库](https://github.com/vuepress/core)，文档所使用的 [GitHub 仓库](https://github.com/vuepress/docs)
 
-# License
+## License
 
 [MIT](https://github.com/shimu115/wallpaper-api-docs/blob/main/LICENSE)
