@@ -1,6 +1,15 @@
 # wallpaper-api 使用文档
 
-* 具体访问 [此网站](https://wpadoc.shimupersonal.top/)
+<p align="center">
+  <a href="https://github.com/shimu115/wallpaper-api-docs/actions/workflows/docs.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/shimu115/wallpaper-api-docs/docs.yml?branch=main&label=build&logo=github&color=brightgreen" alt="Build Status">
+  </a>
+  <img src="https://img.shields.io/badge/Node.js-22.x-brightgreen?logo=node.js" alt="Node.js">
+  <img src="https://img.shields.io/badge/VuePress-2.x-blue?logo=vue.js" alt="VuePress">
+  <img src="https://img.shields.io/github/license/shimu115/wallpaper-api-docs?color=green&logo=open-source-initiative" alt="License">
+</p>
+
+* 文档具体 [访问此处](https://wpadoc.shimupersonal.top/)
 
 ## deployments
 
