@@ -33,4 +33,5 @@ build/
 .vscode/
 docs/.vuepress/.temp/*
 docs/.vuepress/.cache/*
+docs/.vuepress/disk/*
 node_modules/
