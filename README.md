@@ -6,7 +6,9 @@
   </a>
   <img src="https://img.shields.io/badge/Node.js-22.x-brightgreen?logo=node.js" alt="Node.js">
   <img src="https://img.shields.io/badge/VuePress-2.x-blue?logo=vue.js" alt="VuePress">
-  <img src="https://img.shields.io/github/license/shimu115/wallpaper-api-docs?color=green&logo=open-source-initiative" alt="License">
+  <a href="https://github.com/shimu115/wallpaper-api-docs/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/shimu115/wallpaper-api-docs?color=green&logo=open-source-initiative" alt="License">
+  </a>
 </p>
 
 * 文档具体 [访问此处](https://wpadoc.shimupersonal.top/)
