@@ -36,7 +36,9 @@ export const sidebar = {
         {
             text: "Release Notes",
             collapsible: true,
-            link: "/release-notes.md"
+            children: [
+                "/release-notes.md"
+            ]
         },
     ]
 }
