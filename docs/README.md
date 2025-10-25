@@ -32,5 +32,5 @@ features:
     - title: Release Notes
       details: 版本更新日志
 
-footer: MIT Licensed | Copyright © 2025-present Shimu Community
+footer: MIT License | Copyright © 2025 Shimu Community
 ---
