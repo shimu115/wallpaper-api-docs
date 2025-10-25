@@ -2,14 +2,14 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { sidebar, navbar } from './config/index.js'
+import bar from './config/index.js'
 
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme(
         {
-            sidebar: sidebar,
-            navbar: navbar,
+            sidebar: bar.sidebar,
+            navbar: bar.navbar,
             base: '/',
         }
     ),
