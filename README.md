@@ -1,4 +1,4 @@
-# wallpaper-api 使用文档
+<h1 align="center">wallpaper-api 使用文档</h1>
 
 <p align="center">
   <a href="https://github.com/shimu115/wallpaper-api-docs/actions/workflows/docs.yml">
