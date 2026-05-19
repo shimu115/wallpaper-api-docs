@@ -28,7 +28,8 @@ export const sidebar = {
             collapsible: true,
             children: [
                 '/deploy/docker.md',
-                '/deploy/deploy.md'
+                '/deploy/deploy.md',
+                '/deploy/application.md'
             ]
         }
     ],
