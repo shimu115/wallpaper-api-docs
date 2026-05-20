@@ -1,16 +1,11 @@
 # docker 构建与部署
 ## 构建 docker 镜像
 **使用命令**
+### 构建镜像
 ~~~ bash
 docker build -t wallpaper-api:latest .
 ~~~
-可以查看下项目中的 application.yml 文件，如果想更改配置，可以再 `ENTRYPOINT` 这一行加上对应的配置参数
-例：
-~~~
-# 刷新数据默认为 1 小时刷新一次，若改为每天凌晨 3 点刷新一次可以添加 -Dtask.wallpaper.cron="0 0 3 */1 * ?"
-ENTRYPOINT ["java", "-Xms256m", "-Xmx512m", "-Dtask.wallpaper.cron=\"0 0 3 */1 * ?\"", "-jar", "/workspace/wallpaper-api.jar"]
-~~~
-具体怎么用可以自行搜索
+
 ## 手动创建容器
 **docker cli 创建容器**
 ~~~bash
@@ -34,12 +29,22 @@ services:
     restart: unless-stopped
 ~~~
 有更多的配置可查看 [application.yml](application.md)
-## 本项目提供了构建与启动的脚本
+## 脚本构建镜像与启动镜像
 脚本提供的是默认的配置进行部署，若想更改配置，请自行根据 [application.yml](application.md) 修改 docker-compose.yml 
+~~~ bat
+# clone 项目 (要先自行安装 git 工具，或直接下载项目的 zip 文件解压)
+git clone https://github.com/shimu115/wallpaper-api.git
+# 进入项目目录
+cd wallpaper-api
+~~~
+** 脚本位于项目的根目录下 **
 ### windows
-* 双击运行 [build.bat](https://github.com/shimu115/wallpaper-api/blob/main/build.bat) 脚本进行构建
+* 双击运行 build.bat 脚本进行构建，或者使用 cmd 命令运行 build.bat
+~~~ bat
+./build.bat
+~~~
 ### linux
-* 运行 [build.sh](https://github.com/shimu115/wallpaper-api/blob/main/build.sh) 脚本进行构建
+* 运行 build.sh 脚本进行构建
   ~~~ bash
   # 给脚本权限
   chmod +x build.sh
