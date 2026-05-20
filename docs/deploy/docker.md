@@ -11,13 +11,14 @@ docker build -t wallpaper-api:latest .
 ENTRYPOINT ["java", "-Xms256m", "-Xmx512m", "-Dtask.wallpaper.cron=\"0 0 3 */1 * ?\"", "-jar", "/workspace/wallpaper-api.jar"]
 ~~~
 具体怎么用可以自行搜索
-## 创建容器
+## 手动创建容器
 **docker cli 创建容器**
 ~~~bash
 docker run -d \
   -p 9123:9123 \
   --name wallpaper-api \
   --restart=unless-stopped \
+  -e TASK_WALLPAPER_CRON="0 0 3 */1 * ?" \
   wallpaper-api:latest
 ~~~
 **docker compose 创建容器**
@@ -28,5 +29,20 @@ services:
     container_name: wallpaper-api
     ports:
       - 9123:9123
+    environment:
+      TASK_WALLPAPER_CRON: "0 0 3 */1 * ?"
     restart: unless-stopped
 ~~~
+有更多的配置可查看 [application.yml](application.md)
+## 本项目提供了构建与启动的脚本
+脚本提供的是默认的配置进行部署，若想更改配置，请自行根据 [application.yml](application.md) 修改 docker-compose.yml 
+### windows
+* 双击运行 [build.bat](https://github.com/shimu115/wallpaper-api/blob/main/build.bat) 脚本进行构建
+### linux
+* 运行 [build.sh](https://github.com/shimu115/wallpaper-api/blob/main/build.sh) 脚本进行构建
+  ~~~ bash
+  # 给脚本权限
+  chmod +x build.sh
+  # 运行脚本
+  ./build.sh
+  ~~~
