@@ -37,7 +37,7 @@ git clone https://github.com/shimu115/wallpaper-api.git
 # 进入项目目录
 cd wallpaper-api
 ~~~
-** 脚本位于项目的根目录下 **
+**脚本位于项目的根目录下**
 ### windows
 * 双击运行 build.bat 脚本进行构建，或者使用 cmd 命令运行 build.bat
 ~~~ bat
